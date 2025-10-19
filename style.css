@@ -1,0 +1,782 @@
+/* Кнопки "За жанром", "Серіали", "Мультики" */
+.genre-main-btn {
+    background: linear-gradient(135deg, #e50914, #ff6a00);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45), inset 0 2px 0 rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .genre-main-btn.active {
+    background: #e50914;
+    color: #fff;
+    }
+    
+    /* Контейнер для кнопок зверху */
+    .genre-main-wrapper {
+    background: #1c1c1c;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    }
+    .genre-main-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    }
+    
+    #genre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 12px 0;
+    }
+    
+    /* Підкатегорії */
+    .genre-btn {
+      background: #333;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 16px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .genre-btn:hover {
+      background: #e50914;
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(229, 9, 20, 0.5);
+    }
+    
+    .genre-button-container {
+    margin-top: 24px;
+    }
+    
+    .genre-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 8px;
+    overflow-x: unset;
+    }
+    
+    .fade-in {
+    animation: fadeInUp 0.6s ease-in-out;
+    }
+    
+    @keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translateY(12px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
+    
+    @media (max-width: 480px) {
+    .genre-main-btn, .genre-btn {
+    font-size: 14px;
+    padding: 10px 12px;
+    }
+    }
+    
+    .genre-btn.active {
+    background: #e50914;
+    color: #fff;
+    }
+    .genre-main-btn.active {
+    background: linear-gradient(135deg, #ff3c00, #ff9900);
+    box-shadow: 0 0 10px rgba(255, 100, 0, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.08);
+    transform: scale(1.04);
+    color: #fff;
+    }
+    
+    .film-day-card {
+      position: relative;
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      max-width: 320px;
+      margin: auto;
+      padding: 14px;
+    
+      /* ✨ ЯСКРАВА, АЛЕ НЕ НАВ’ЯЗЛИВА НЕОН-ПІДСВІТКА */
+    box-shadow:
+        0 0 14px rgba(0, 255, 255, 0.5),
+        0 0 24px rgba(0, 255, 255, 0.3),
+        0 0 34px rgba(0, 255, 255, 0.15);
+    }
+    
+    
+    
+    .film-day-card:hover {
+    box-shadow:
+    0 0 18px rgba(0, 255, 255, 0.8),
+    0 0 38px rgba(0, 255, 255, 0.6),
+    0 0 54px rgba(0, 255, 255, 0.4);
+    }
+    
+    .film-day-overlay p {
+    margin: 6px 0 12px;
+    font-size: 14px;
+    color: #ccc;
+    }
+    
+    #film-of-the-day {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      padding: 0;
+      margin: auto;
+      max-width: 320px;
+    
+      /* 🔹 ПРИГЛУШЕНА ТІНЬ + ПІДСВІТКА */
+      box-shadow:
+        0 0 14px rgba(0, 255, 255, 0.6),
+        0 0 26px rgba(0, 255, 255, 0.4),
+        0 0 36px rgba(0, 255, 255, 0.2);
+    }
+    
+    
+    
+    .back-button {
+    background: linear-gradient(135deg, #00e5ff, #00bcd4);
+    border: none;
+    color: #000;
+    padding: 6px 14px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 14px rgba(0, 229, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .genre-main-btn:hover {
+      background: linear-gradient(135deg, #ff1a2a, #ff7a00);
+      transform: scale(1.05);
+      box-shadow: 
+        0 0 15px rgba(229, 9, 20, 0.6),
+        0 0 20px rgba(0, 229, 255, 0.4); /* якщо хочеш змішати ефекти */
+    }
+    
+    
+    .spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    }
+    
+    @media (max-width: 400px) {
+    .nav button {
+    font-size: 18px;
+    }
+    .nav button span {
+    font-size: 13px;
+    }
+    }
+    
+    body {
+    padding-bottom: 100px;
+    }
+    
+    .collection-card {
+      width: 100px; /* 🔻 зменшено */
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.4),
+        0 0 20px rgba(0, 255, 255, 0.2),
+        0 0 30px rgba(0, 255, 255, 0.1);
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+    
+    
+    
+    
+    .collection-card:hover {
+      transform: scale(1.05);
+      box-shadow:
+        0 0 18px rgba(0, 255, 255, 0.8),
+        0 0 38px rgba(0, 255, 255, 0.6),
+        0 0 54px rgba(0, 255, 255, 0.4);
+    }
+    
+    
+    .collection-card img {
+      width: 100%;
+      height: 120px;         /* фіксована висота */
+      object-fit: cover;     /* обрізає, не розтягує */
+      border-bottom: 1px solid #333;
+    }
+    
+    .collection-card p {
+      padding: 4px 6px;
+      font-size: 12px;
+      line-height: 1.2;
+      text-align: center;
+      height: auto;
+    }
+    
+    
+    .film-card {
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 0 6px rgba(0, 255, 255, 0.1);
+    }
+    
+    .film-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    
+    
+    .film-card h3 {
+      font-size: 14px;
+      margin: 6px 0 2px;
+      line-height: 1.2;
+    }
+    
+    .film-card p {
+      font-size: 13px;
+      color: #ccc;
+      margin: 0 0 6px;
+    
+      /* ✂️ обмеження опису до 3 рядків */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .film-card .search-button {
+      font-size: 13px;
+      padding: 6px 10px;
+    }
+    
+    
+    .watch-btn {
+    background-color: #e50914;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    padding: 10px 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow:
+    0 0 10px rgba(229, 9, 20, 0.6),
+    0 0 20px rgba(229, 9, 20, 0.4),
+    0 0 30px rgba(229, 9, 20, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .watch-btn:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.04);
+    box-shadow:
+    0 0 12px rgba(255, 26, 26, 0.8),
+    0 0 24px rgba(255, 26, 26, 0.6),
+    0 0 36px rgba(255, 26, 26, 0.3);
+    }
+    
+    .btn-container {
+    display: flex;
+    justify-content: center;
+    }
+    
+    .film-title-overlay {
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #fff;
+      font-family: 'Russo One', sans-serif;
+       font-size: 12px; /* або 13px */
+      font-weight: bold;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+      z-index: 2;
+    }
+    
+    
+    
+    #film-day-img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: scale-down;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+      background-color: #000;
+    }
+    #collections {
+      gap: 12px;
+      padding: 10px 8px;
+      scroll-snap-type: x mandatory;
+      overflow-x: auto;
+      display: flex;
+      flex-wrap: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    
+    #collections::-webkit-scrollbar {
+      height: 6px;
+    }
+    #collections::-webkit-scrollbar-thumb {
+      background: rgba(0, 255, 255, 0.4);
+      border-radius: 4px;
+    }
+    
+    #genre-results {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    
+    .film-desc {
+      max-height: 40px; /* показує тільки кілька рядків */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: max-height 0.3s ease;
+    }
+    
+    .film-card.expanded .film-desc {
+      max-height: 500px; /* повна висота при розгортанні */
+      overflow: visible;
+    }
+    
+    .search-button {
+      background-color: #e50914;
+      border: none;
+      border-radius: 14px;
+      color: white;
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow:
+        0 0 10px rgba(229, 9, 20, 0.6),
+        0 0 20px rgba(229, 9, 20, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .search-button:hover {
+      background-color: #ff1a1a;
+      transform: scale(1.04);
+      box-shadow:
+        0 0 12px rgba(255, 26, 26, 0.8),
+        0 0 24px rgba(255, 26, 26, 0.6);
+    }
+    .fav-button {
+      background: #0097a7; /* темніший бірюзовий */
+      border: none;
+      border-radius: 12px;
+      color: white;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow:
+        0 0 6px rgba(0, 183, 255, 0.3),
+        0 0 12px rgba(0, 183, 255, 0.15);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .fav-button:hover {
+      background: #00bcd4; /* світліший при наведенні */
+      transform: scale(1.04);
+    }
+    
+    
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      background: linear-gradient(135deg, #00e5ff, #0077be);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.2s ease;
+      z-index: 999;
+    }
+    .scroll-top-btn.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .scroll-top-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.8);
+    }
+    .remove-fav-btn {
+      background-color: #b71c1c;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 6px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 8px;
+      box-shadow: 0 0 8px rgba(183, 28, 28, 0.6);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .remove-fav-btn:hover {
+      background-color: #e53935;
+      transform: scale(1.05);
+    }
+    
+    .btn-lucky {
+      background: #00bcd4;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 10px auto;
+      display: block;
+      box-shadow:
+        0 0 15px rgba(0, 247, 255, 0.6),
+        0 0 25px rgba(0, 247, 255, 0.4),
+        0 0 35px rgba(0, 247, 255, 0.2);
+      transition: transform 0.2s ease;
+    }
+    .btn-lucky:hover {
+      transform: scale(1.05);
+    }
+    
+    .btn-secondary, .btn-donate {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 15px;
+      margin-bottom: 10px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      box-shadow:
+        0 0 15px rgba(0, 247, 255, 0.5),
+        0 0 25px rgba(0, 247, 255, 0.3),
+        0 0 35px rgba(0, 247, 255, 0.1);
+      transition: transform 0.2s ease;
+    }
+    
+    .btn-donate {
+      background: #f50057;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      display: block;
+      width: calc(100% - 32px); /* майже весь екран */
+      margin: 0 auto 10px; /* вирівнювання по центру */
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 15px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    
+      /* 💡 Неонова підсвітка + анімація */
+      box-shadow:
+        0 0 8px rgba(245, 0, 87, 0.5),
+        0 0 14px rgba(245, 0, 87, 0.6),
+        0 0 20px rgba(245, 0, 87, 0.3);
+      animation: flicker 2s infinite;
+      transition: transform 0.2s ease;
+    }
+    
+    .btn-donate:hover {
+      transform: scale(1.04);
+    }
+    
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        box-shadow:
+          0 0 8px rgba(245, 0, 87, 0.5),
+          0 0 14px rgba(245, 0, 87, 0.6),
+          0 0 20px rgba(245, 0, 87, 0.3);
+      }
+      20%, 24%, 55% {
+        box-shadow:
+          0 0 4px rgba(245, 0, 87, 0.2),
+          0 0 8px rgba(245, 0, 87, 0.3);
+      }
+    }
+    
+    
+    #history-list {
+      margin-top: 20px;
+      border-top: 1px solid #333;
+      padding-top: 10px;
+    }
+    
+    .rating {
+      margin-top: 8px;
+    }
+    
+    .rating .star {
+      font-size: 20px;
+      cursor: pointer;
+      color: #888;
+      transition: color 0.2s;
+    }
+    
+    .rating .star.filled {
+      color: gold;
+    }
+    .film-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    
+    .film-list .film-card {
+      background: #1b1b1b;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.1);
+    }
+    #loading-indicator {
+      position: fixed;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.7);
+      padding: 20px 30px;
+      border-radius: 12px;
+      z-index: 9999;
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,255,255,0.5);
+    }
+    
+    .loader {
+      border: 4px solid #444;
+      border-top: 4px solid #00e5ff;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      animation: spin 0.8s linear infinite;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* 🌞 Світла тема */
+    .light-theme {
+      background-color: #fff;
+      color: #000;
+    }
+    
+    .light-theme .section {
+      background-color: #fff;
+      color: #000;
+    }
+    
+    .light-theme .nav {
+      background: #eee;
+      border-top: 1px solid #ccc;
+    }
+    
+    .light-theme .nav button {
+      color: #333;
+    }
+    
+    .light-theme .nav button.active {
+      color: #007BFF;
+      text-shadow: none;
+    }
+    
+    .light-theme .film-card {
+      background-color: #f0f0f0;
+      color: #000;
+    }
+    
+    .light-theme .back-button,
+    .light-theme .btn-secondary {
+      background-color: #ddd;
+      color: #000;
+    }
+    
+    .light-theme .search-button,
+    .light-theme .fav-button {
+      background-color: #007BFF;
+      color: #fff;
+    }
+    .account-button {
+      background: linear-gradient(135deg, #1c1c1c, #333);
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      padding: 14px;
+      border-radius: 14px;
+      width: 100%;
+      margin-bottom: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .account-button:hover {
+      background: linear-gradient(135deg, #00e5ff, #00bcd4);
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+    }
+    
+    
+    .btn-lucky:hover,
+    .btn-secondary:hover {
+      transform: scale(1.05);
+      box-shadow:
+        0 0 20px rgba(0, 247, 255, 0.7),
+        0 0 35px rgba(0, 247, 255, 0.4);
+    }
+    
+    #searchResults {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .suggest-button {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 18px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(0, 198, 255, 0.5);
+      transition: background 0.3s, transform 0.2s;
+    }
+    
+    .suggest-button:hover {
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      transform: scale(1.05);
+    }
+    
+    #film-of-the-day {
+      position: relative; /* Забезпечує правильне відображення */
+      z-index: 0; /* Фільм не має покривати інші елементи */
+    }
+    
+    .section {
+      z-index: 1; /* Всі секції мають більший z-index, щоб вони були "вище" */
+    }
+    
+    .nav {
+      z-index: 999; /* Навігаційне меню з найвищим пріоритетом */
+    }
+    
+    .favorite-watch-btn {
+      background-color: #4fc3f7; /* ніжно-голубий */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 6px 12px; /* зробив менший відступ */
+      font-size: 13px; /* трошки менший шрифт */
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(79, 195, 247, 0.5);
+      transition: background-color 0.3s, transform 0.2s;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    .favorite-watch-btn:hover {
+      background-color: #29b6f6;
+      transform: scale(1.05); /* при наведенні трохи збільшується */
+    }
+
+.series-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px; /* великий розмір заголовка */
+  font-weight: bold;
+  color: #00e5ff;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.series-header:hover {
+  color: #00f7ff;
+}
+
+.series-icon {
+  font-size: 28px;
+}
+.series-title {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #00e5ff, #00c6ff);
+  color: #000;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
+  text-align: center;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.series-title:hover {
+  background: linear-gradient(90deg, #00c6ff, #00e5ff);
+  transform: scale(1.05);
+}
